@@ -37,7 +37,7 @@ module "ibm-kubernetes-toolchain" {
   toolchain_name    = "cloudant-terraform-toolchain-node-${random_string.random.result}"
   application_repo  = "https://github.com/triceam/nodejs-cloudant"
   resource_group    = var.resource_group
-  cluster_name      = ibm_container_cluster.cluster.name
+  cluster_name      = var.cluster.name
   cluster_namespace = var.cluster_namespace
   container_registry_namespace = var.container_registry_namespace
 }
