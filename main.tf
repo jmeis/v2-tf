@@ -31,7 +31,7 @@ resource "ibm_container_bind_service" "bind_service" {
 }
 
 module "ibm-kubernetes-toolchain" {
-  source            = "github.com/IBM-Cloud/ibm-kubernetes-toolchain-module"
+  source            = "github.com/jmeis/ibm-kubernetes-toolchain-module"
   ibmcloud_api_key  = var.ibmcloud_api_key
   region            = "us-south"
   toolchain_name    = "cloudant-terraform-toolchain-node-${random_string.random.result}"
